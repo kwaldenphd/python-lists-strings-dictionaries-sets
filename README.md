@@ -1,4 +1,4 @@
-# Combined lists and strings, dictionaries and sets Python lab
+# Combined Lists and Strings, Dictionaries and Sets Python lab
 
 # Lists and Strings in Python
 
@@ -566,9 +566,7 @@ numbers
 
 75. To unpack what happened in that last bit of code- the `range()` function returns a sequence of numbers.
 
-76. The default `range()` function starts at `0`, but in this example we start at `5`. 
-
-77. The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
+76. The default `range()` function starts at `0`, but in this example we start at `5`. The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
 
 #### A Quick Detour Into `range()`
 
@@ -772,8 +770,12 @@ min([0, 1, 2, 3])
 # find min value using list variable
 min(list)
 ```
+To use any of the `random` functions, we would first need to import the `random` module.
 
 ```Python
+# import random module
+import random
+
 # select element at random
 random.choice(list)
 ```
