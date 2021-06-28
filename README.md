@@ -1298,7 +1298,7 @@ Q2: Describe the syntax of the three commands that we just used (steps 10-14) in
 
 Q3: Explain how each of these two programs (steps 15-18) work in your own words.
 
-Q4: Why does `print(2/3)` return `0`? How would you modify your code to return the decimal number? Why?
+Q4: Why does `print(2//3)` return `0`? How would you modify your code to return the decimal number? Why?
 
 Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.
 
