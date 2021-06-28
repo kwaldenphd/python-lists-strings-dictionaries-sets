@@ -734,20 +734,6 @@ numbers.reverse()
 numbers
 ```
 
-```Python
-# generate reversed version of list
-reversed(numbers)
-
-# show original list
-numbers
-
-# create new variable with reversed list
-reversed_numbers = reversed(numbers)
-
-# show new varaible with reversed list
-reversed_numbers
-```
-
 #### Utility Functions
 
 102. A few other functions that come in handy when working with lists that contain numbers.
