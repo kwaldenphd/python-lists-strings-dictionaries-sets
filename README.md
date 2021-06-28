@@ -844,8 +844,7 @@ Q13: Using the same list from the previous question, write a program that includ
 - Deletes an item from your list
 - Sorts your list in-place
 - Generates a sorted version of your list
-- Reverse sorts your list in-place
-- Generates a reverse sorted version of your list
+- Reverses your list in-place
 - Determiens the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
@@ -1007,9 +1006,8 @@ Q15: Using the same list from the previous question, write a program that includ
 - Deletes an item from your list
 - Sorts your list in-place
 - Generates a sorted version of your list
-- Reverse sorts your list in-place
-- Generates a reverse sorted version of your list
-- Determiens the `min` and `max` values for your list
+- Reverses your list in-place
+- Determines the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
@@ -1326,32 +1324,26 @@ Q11: Create the list `numbers` with the following values: `[[0, 1], [2, 3], [4, 
 Q12: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
 Q13: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverses your list in-place
+- Determiens the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
 
 Q14: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
 Q15: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverses your list in-place
+- Determines the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
 
 Q16: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
 <ol type="a">
