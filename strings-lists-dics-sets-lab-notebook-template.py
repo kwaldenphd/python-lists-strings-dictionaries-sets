@@ -16,7 +16,7 @@
 
 
 
-"""Q4: Why does `print(2/3)` return `0`? How would you modify your code to return the decimal number? Why?"""
+"""Q4: Why does `print(2//3)` return `0`? How would you modify your code to return the decimal number? Why?"""
 
 
 
