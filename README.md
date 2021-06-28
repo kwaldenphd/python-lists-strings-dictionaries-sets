@@ -443,7 +443,7 @@ the boy who blocked his own shot'.endswith('shot')
 ```python
 color = "turquoise"
 index_number = color.index("q")
-print ("The index number for the letter u within the word " + color + " is", index_number)
+print ("The index number for the letter q within the word " + color + " is " + index_number)
 ```
 
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
