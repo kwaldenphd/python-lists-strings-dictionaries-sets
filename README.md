@@ -845,7 +845,7 @@ Q13: Using the same list from the previous question, write a program that includ
 - Sorts your list in-place
 - Generates a sorted version of your list
 - Reverses your list in-place
-- Determiens the `min` and `max` values for your list
+- Determines the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
