@@ -358,17 +358,14 @@ len(first_name)
 
 ### Sort
 
-47. We can sort characters in a string alphabetically or reverse alphabetically.
+47. We can sort characters in a string alphabetically.
 
 ```Python
 # sort alphabetically
 sorted(first_name)
-
-# reverse sort
-reversed(first_name)
 ```
 
-48. These commands output the characters in the string in alphabetical or reverse alphabetical order.
+48. These commands output the characters in the string in alphabetical order.
 
 ### Max and Min
 
