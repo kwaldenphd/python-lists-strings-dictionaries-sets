@@ -255,7 +255,7 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 len(first_name)
 ```
 
-32. We can also extract (or modify) individual characters within a string. To do so, we need a way to specify which character we mean. 
+32. We can also extract (or isolate) individual characters within a string. To do so, we need a way to specify which character we mean. 
 
 33. This is done by giving each position in the string an `index number` or `index operator`, which is determined by simply counting off (starting at 0) from left to right. 
 
