@@ -1033,19 +1033,19 @@ Q15: Using the same list from the previous question, write a program that includ
 
 ```Python
 # creating empty dictionary using dict()
-english_to_french = dict()
+english_to_french = dict({})
 
 # check variable type
 type(english_to_french)
 
 # create dictionary this time with key-value pairs
-english_to_french = dict(
+english_to_french = dict({
   'one': 'un',
   'two': 'deux',
   'three': 'trois',
   'four': 'quatre',
   'five': 'cinq'
-)
+})
 ```
 
 ```Python
