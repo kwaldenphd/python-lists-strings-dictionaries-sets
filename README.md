@@ -1233,6 +1233,7 @@ english_to_french = {
 153. Now that we have a dictionary, we can start to bring in some of the syntax covered in previous labs.
 
 ```Python
+# print dictionary
 print(english_to_french)
 ```
 
