@@ -1348,14 +1348,13 @@ for key, value, in english_to_french.items():
 
 ## Dictionary Lab Notebook Question
 
-<blockquote>Q17: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
+Q17: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
 <ol type="a">
  <li>Add new elements to your dictionary.</li>
  <li>Update an element in your dictionary.</li>
  <li>Print a list of all the keys in your dictionary.</li>
  <li>Print a list of all the values in your dictionary.</li>
  </ol>
- </blockquote>
 
 # Sets
 
@@ -1515,7 +1514,7 @@ Q13: Using the same list from the previous question, write a program that includ
 - Sorts your list in-place
 - Generates a sorted version of your list
 - Reverses your list in-place
-- Determiens the `min` and `max` values for your list
+- Determines the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
