@@ -29,7 +29,6 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
   </tr>
   </table>
 
-
 ## Acknowledgements
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Peter Bui](http://www3.nd.edu/~pbui/) for the [CSE 10101 "Elements of Computing I" course](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/).
