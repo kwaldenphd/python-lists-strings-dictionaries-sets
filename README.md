@@ -1,7 +1,5 @@
 # Combined Lists and Strings, Dictionaries and Sets Python lab
 
-# Lists and Strings in Python
-
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
@@ -16,6 +14,21 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
   * For dictionaries, this includes basic syntax, ordering, adding key-value pairs, updating, lists, and iteration
   * For sets, this includes basic syntax, adding and removing, and testing for membership
 - Use Python methods and functions to work with dictionaries and sets
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3205246-fb3f-4fed-8ab8-ad5500fa956e">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=119e8ba8-f51c-4e7e-8767-ae58010a6213">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
 
 ## Acknowledgements
 
@@ -32,6 +45,8 @@ Elements of this lab procedure were adapted from materials developed by [Dr. Cor
 Elements of this lab procedure were adapted from materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
 # Table of Contents
+- [Lecture and Live Coding](#lecture-and-live-coding)
+- [Lab Notebook Template](#lab-notebook-template)
 - [Python Syntax: Methods and Functions](#python-syntax-methods-and-functions)
 - [Variables](#variables)
 - [Strings](#strings)
@@ -40,35 +55,16 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
   * [Combining Variable Types](#combining-variable-types)
   * [String Length and Access](#string-length-and-access)
   * [Other String Operations](#other-string-operations)
-    * [Length](#length)
-    * [Properties](#properties)
-    * [Sort](#sort)
-    * [Max and Min](#max-and-min)
-    * [`in` operator](#in-operator)
-    * [Search](#search)
 - [Lists](#lists)
   * [Lists With Numbers](#lists-with-numbers)
     * [List Length and Access](#list-length-and-access)
     * [Modifying Lists](#modifying-lists)
-      * [Growing Lists](#growing-lists)
-      * [A Quick Detour Into `range()`](#a-quick-detour-into-range)
-      * [Deleting Items From Lists](#deleting-items-from-lists)
     * [Empty Lists](#empty-lists)
     * [Nesting and Sub-Lists](#nesting-and-sublists)
     * [Other List Operations](#other-list-operations)
-      * [Lists and the `in` Operator](#lists-and-the-in-operator)
-      * [List Concatenation](#list-concatenation)
-      * [Copying](#copying)
-      * [Sorting](#sorting)
-        * [Reverse](#reverse)
-      * [Utility Functions](#utility-functions)
-    * [Looking Ahead](#looking-ahead)
     * [Lab Notebook Questions on Lists With Numbers](#lab-notebook-questions-on-lists-with-numbers)
   * [Lists With Strings](#lists-with-strings)
     * [List Functions and String Elements](#list-functions-and-string-elements)
-      * [`Len`](#len)
-      * [`Sort`](#sort)
-      * [`Reverse`](#reverse)
     * [Lab Notebook Questions on Lists With Strings](#lab-notebook-questions-on-lists-with-strings)
 - [Dictionaries](#dictionaries)
   * [Creating a Dictionary](#creating-a-dictionary)
@@ -83,8 +79,48 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 - [Additional Lab Notebook Questions](#additional-lab-notebook-questions)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
+
+[Link to lab procedure as a Jupyter Notebook](https://colab.research.google.com/drive/1zYwHi6ScEyST2s5LdkKWGZNzig5bpQPW?usp=sharing)
   
+# Lecture and Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of select sections.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3205246-fb3f-4fed-8ab8-ad5500fa956e">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=119e8ba8-f51c-4e7e-8767-ae58010a6213">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
+
+# Lab Notebook Template
+
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1GrrOAcDbYlrRbLADh1bb2b3jbZUsnx6o/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1MMdu-e1YCynl8Xy17jh2NCLIQEOcUlZX?usp=sharing)
+
 # Python Syntax: Methods and Functions
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ccafd04-171b-47c5-9cda-ad8201619bf3">Lab overview</a></td>
+  </tr>
+  </table>
 
 1. Python has some specific terminology used to describe elements of code.
 
@@ -111,6 +147,13 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 <blockquote>Q1: In your own words, explain the difference between <code>print(hello)</code> and <code>print(“hello”)</code>.</blockquote>
 
 # Strings
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3019ac5c-06ad-4deb-9e49-ad8201622eb6">Strings</a></td>
+  </tr>
+  </table>
 
 9. What are strings? 
 
@@ -177,20 +220,29 @@ print(name.title())
 19. Let’s modify our code a bit and create two new variables `first_name` for your first name and `last_name` for your last name. We can then combine these two string variables (called concatenation) in a third variable called `full_name`.
 
 20. If we want our first and last name to be separated by a space, we need to tell Python to add one in by including the `“ “`, otherwise, each string will be printed back-to-back.
+
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# output last variable
 print(full_name)
 ```
 
 21. We can then use the `print()` function as we did before to output `full_name` in title case.
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# output last variable in title case as part of print statement
 print("Hello, " + full_name.title() + "!")
 ```
 
@@ -199,12 +251,17 @@ print("Hello, " + full_name.title() + "!")
 23. We could also assign this whole sentence to a variable and return the same output.
 
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# use concatenation to create new variable
 sentence="Hello, " + full_name.title() + "!"
 
+# output last variable
 print(sentence)
 ```
 
@@ -215,7 +272,9 @@ print(sentence)
 24. Python works with integers (whole numbers) and floats (any number with a decimal point). Python uses the basic mathematic symbols to perform functions: `+` (add), `-` (subtract), `*` (multiply), `/` (divide). 
 
 25. Try this program:
+
 ```Python
+# arithmetic operator examples
 print(2+3)
 print(2-3)
 print(2*3)
@@ -226,21 +285,26 @@ print(2/3)
 26. Hint: Try `print(2.0//3.0)` using the floating point integers (numbers with decimal points).
 
 27. Let’s write a new program with an integer variable and a string variable. Feel free to modify course number and department if taking this as something other than CSE 10101.
+
 ```Python
+# assign string variable
 course_name="Elements of Computing I"
+
+# assign integer variable
 course_number = 10101
 
+# concatenation in print statement
 print("Welcome to " + course_name.title() + " CSE:" + course_number)
 ```
 
 28. When you run the program, you will receive an error.
 
-<p align="center"><a href="https://github.com/kwaldenphd/Python/blob/master/images/Image_8.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/Python/blob/master/images/Image_8.png?raw=true" /></a></p>
-
 29. The `type` error is telling us that we cannot use these two different variable types in the same function. 
 
 30. When we want numbers to be read as characters rather than numeric digits, we have to use the string method `str()` to convert the integer into a string of characters.
+
 ```Python
+# concatenation in print statement, using str function to convert course number
 print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 ```
 <blockquote>Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.</blockquote>
@@ -252,6 +316,7 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 31. We can get the length or size of a string by using the `len` function.
 
 ```Python
+# show length/number of characters in first_name variable
 len(first_name)
 ```
 
@@ -272,6 +337,7 @@ first_name[-1]
 35. In Python there is no notion of a character type as there is in languages such as Java or C. So when we check the type for a character in a string, we get back another string.
 
 ```Python
+# show data type for last character in string
 type(first_name[0])
 ```
 
@@ -286,6 +352,7 @@ type(first_name[0])
 <blockquote>Q7: Write a program that prompts the user to enter a 6-letter word, and then prints the first, third, and fifth letters of that word.</blockquote>
  
 38. A sample output for your program might look like this:
+
 ```
 Please enter a 6-letter word: joyful
 The first, third, and fifth letters are: j y u
@@ -296,13 +363,17 @@ The first, third, and fifth letters are: j y u
 40. The following program will result in a `TypeError`.
 
 ```Python
+# program that attempts to modify character in a string
 first_name[0] = 'k'
 ```
 
 41. So what do you do when you want to update a string? You simply construct a new one!
 
 ```Python
+# reassign first_name variable with modified first character
 first_name = 'k' + first_name[1:]
+
+# show reassigned variable
 first_name
 ```
 
@@ -315,6 +386,7 @@ first_name
 43. We've already seen the `len` function in action, but to refresh:
 
 ```Python
+# get length of first_name variable
 len(first_name)
 ```
 
@@ -441,14 +513,26 @@ the boy who blocked his own shot'.endswith('shot')
 
 59. We can retrieve the index of the letter `q` (which is 3) as follows:
 ```python
+# assign string variable
 color = "turquoise"
+
+# get index number of q character
 index_number = color.index("q")
+
+# show index number as part of print statement
 print ("The index number for the letter q within the word " + color + " is " + index_number)
 ```
 
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
 
 # Lists
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e9fb874-99d5-4d5b-923b-ad82016231cb">Lists</a></td>
+  </tr>
+  </table>
 
 60. Python allows us to store information in a few different ways. 
 
@@ -482,6 +566,7 @@ type(numbers)
 65. We can use the `len` function to get the length of a list.
 
 ```Python
+# show length of numbers list
 len(numbers)
 ```
 
@@ -498,6 +583,8 @@ numbers[-1]
 ```Python
 # modify first item in a list
 numbers[0] = 'zero'
+
+# show updated list
 numbers
 ```
 
@@ -525,6 +612,7 @@ numbers[2]
 70. An invalid index will yield an IndexError.
 
 ```Python
+# example of invalid index
 numbers[1000]
 ```
 
@@ -547,6 +635,8 @@ numbers[-2]
 ```Python
 # modify first item in a list
 numbers[0] = 'zero'
+
+# show updated list
 numbers
 ```
 
@@ -557,10 +647,14 @@ numbers
 ```Python
 # add integer 4 to end of numbers list
 numbers.append(4)
+
+# show updated list
 numbers
 
 # add [5,6,7] to end of numbers list
 numbers.extend(range(5, 8))
+
+# show updated list
 numbers
 ```
 
@@ -576,11 +670,13 @@ numbers
 
 79. Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
 
-80. We can actually create lists using `range()`.
+80. We can actually create lists using `range()`. In this example we'll wrap the `list()` function around the `range()` function to create a list of numbers.
 
 ```Python
-# in this example we'll wrap the list() function around the range() function to create a list of numbers
+# create list of numbers
 numbers = list(range(1,10))
+
+# show list of numbers
 print(numbers)
 ```
 
@@ -593,7 +689,10 @@ print(numbers)
 83. A example that changes the step interval.
 
 ```Python
+# create list of numbers with specific start/stop/step interval values
 numbers = list(range(1,11,2))
+
+# show list
 print(numbers)
 ```
 
@@ -634,6 +733,8 @@ list()
 ```Python
 # create list with two sub-lists
 points = [[0, 1], [2, 3]]
+
+# show list
 points
 
 # access first item on list, which is a sublist
@@ -665,6 +766,7 @@ points[1][0]
 92. We can concatenate (or join) two lists using the `+` operator.
 
 ```Python
+# sample concatenation syntax
 [0, 1, 2,] + [3, 4, 5]
 ```
 
@@ -673,6 +775,7 @@ points[1][0]
 93. We can copy a list using the `*` (multiplication) operator.
 
 ```Python
+# sample copy syntax
 [0, 1, 2] * 3
 ```
 
@@ -770,7 +873,8 @@ min([0, 1, 2, 3])
 # find min value using list variable
 min(list)
 ```
-To use any of the `random` functions, we would first need to import the `random` module.
+
+NOTE: To use any of the `random` functions, we would first need to import the `random` module.
 
 ```Python
 # import random module
@@ -783,6 +887,9 @@ random.choice(list)
 ```Python
 # shuffle a list in-place
 random.shuffle(list)
+
+# show updated/shuffled list
+print(list)
 ```
 
 ```Python
@@ -808,6 +915,7 @@ random.sample(list, 2)
 110. We can use a **`for` loop** to iterate over the items in a list.
 
 ```Python
+# sample for loop that iterates over items in list
 for number in numbers:
  print(number)
 ```
@@ -815,6 +923,7 @@ for number in numbers:
 111. We can iterate over just the indeces in the list.
 
 ```Python
+# sample for loop that iterates over index values for items in list
 for i in range(len(numbers)):
  print(number[i])
 ```
@@ -822,6 +931,7 @@ for i in range(len(numbers)):
 112. We can retrieve the item and the index position using the `enumerate()` function.
 
 ```Python
+# sample for loop that gets list value and index using enumerate
 for i, number in enumerate(numbers):
  print(i, number)
 ```
@@ -859,6 +969,7 @@ Q13: Using the same list from the previous question, write a program that includ
 
 117. Write a list of a few of your favorite things.
 ```Python
+# sample list of strings
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 ```
 
@@ -869,6 +980,7 @@ cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 
 120. Add a `print()` function calling a specific item on your list.
 ```Python
+# output first item in the list in title case
 print(cookies[0].title())
 ```
 
@@ -881,13 +993,13 @@ Chocolate Chip
 
 123. A `print` function that outputs the last item on my list of four items would look like this.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# output fourth item in list in title case
 print(cookies[3].title())
 ```
 
 124. We can also work backwards (left-to-right) on our list using negative numbers. For example, to call the last item on the list we could also use the index position `-1`.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# output last item in list in title case using negative index
 print(cookies[-1].title())
 ```
 
@@ -895,7 +1007,7 @@ print(cookies[-1].title())
 
 126. We can concatenate our list items in strings.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# print statement that includes concatenation
 print("My favorite cookie to bake is " + cookies[1].title() + ".")
 ```
 
@@ -905,8 +1017,10 @@ print("My favorite cookie to bake is " + cookies[1].title() + ".")
 
 129. Maybe I have a friend who is allergic to peanut butter. I can change the `peanut butter` entry.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# change third item in list
 cookies[2] = 'oatmeal'
+
+# show updated list
 print(cookies)
 ```
 
@@ -915,8 +1029,13 @@ print(cookies)
 
 131. We can also add data to our list using the append function.
 ```Python
+# recreate original list
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+
+# append value to end of list
 cookies.append('oatmeal')
+
+# show updated list
 print(cookies)
 ```
 
@@ -924,10 +1043,15 @@ print(cookies)
 
 133. We can also use `append()` to create new lists.
 ```Python
+# create empty list
 my_pets = []
+
+# append values to list
 my_pets.append('Christy Mathewson')
 my_pets.append('Smoky Jo Wood')
 my_pets.append('Sandy Koufax')
+
+# show updated list
 print(my_pets)
 ```
 
@@ -937,8 +1061,13 @@ print(my_pets)
 
 136. The `insert()` function allows us to add items to any position in the list.
 ```Python
+# create list of fruits
 fruit = ['apple', 'pear', 'banana']
+
+# insert new value at specific location
 fruit.insert(1, 'orange')
+
+# show updated list
 print(fruit)
 ```
 
@@ -950,15 +1079,25 @@ print(fruit)
 
 140. The following code will remove `orange` from the list.
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# remove second value
 del fruit[1]
+
+# show updated list
 print(fruit)
 ```
 
 141. We can also delete items by value (instead of position) using `remove()`.
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# remove specific string
 fruit.remove('orange')
+
+# show updated list
 print(fruit)
 ```
 
@@ -971,27 +1110,43 @@ print(fruit)
 #### `Len`
 
 143. To find the length of your list, use the `len()` function.
+
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# get length of list and assign to variable
 length = len(fruit)
+
+# output length
 print(length)
+```
+
+```Python
+# alternative syntax
+len(fruit)
 ```
 
 #### `Sort`
 
 144. To alphabetize your list, use the `sort()` method.
 ```Python
-fruit = ['apple', 'orange', 'pear', 'banana']
+# sort list
 fruit.sort()
+
+# show sorted list
 print(fruit)
 ```
 
 #### `Reverse`
 
 145. To print in reverse order, use `reverse()`.
+
 ```Python
-fruit = ['apple', 'orange', 'pear', 'banana']
+# reverse sort list
 fruit.reverse()
+
+# show sorted list
 print(fruit)
 ```
 
@@ -1011,7 +1166,18 @@ Q15: Using the same list from the previous question, write a program that includ
 - Selects a list element at random
 - Shuffles your list
 
+# Additional Lab Notebook Questions on Lists With Strings
+
+Q16: What is the difference between a `list` and a `string`? What are some methods you can perform on a `list` that you can't do with a `string` (and vice versa)?
+
 # Dictionaries
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5a24f407-5860-4d8b-8aea-ad8201622e0f">Dictionaries</a></td>
+  </tr>
+  </table>
 
 <p align="center"><a href="https://github.com/kwaldenphd/python-dictionaries-sets/blob/master/figures/Dic_1.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/python-dictionaries-sets/blob/master/figures/Dic_1.png?raw=true" /></a></p>
 
@@ -1087,6 +1253,7 @@ english_to_french['one']
 157. If we try to access the value for a key that does not exist, Python will return a KeyError.
 
 ```Python
+# code that will return a key error
 english_to_french['asdf']
 ```
 
@@ -1110,12 +1277,14 @@ english_to_french['asdf']
 161. We can use the `.keys()` method to get a list of all keys in the dictionary.
 
 ```Python
+# output keys in dictionary
 print(english_to_french.keys())
 ```
 
 162. We can use the `.values()` method to get a list of all the values in the dictionary.
 
 ```Python
+# output values in dictionary
 print(english_to_french.values())
 ```
 
@@ -1124,11 +1293,14 @@ print(english_to_french.values())
 164. To see that in Python syntax:
 
 ```Python
+# add key-values pairs to dictionary
 english_to_french['six']   = 'six'
 english_to_french['seven'] = 'sept'
 english_to_french['eight'] = 'huit'
 english_to_french['nine']  = 'neuf'
 english_to_french['ten']   = 'dix'
+
+# show updated dictionary
 print(english_to_french)
 ```
 
@@ -1145,6 +1317,7 @@ print(english_to_french)
 169. An example that tells Python to print the key for each key-value pair.
 
 ```Python
+# for loop that outputs keys
 for key in english_to_french.keys():
   print(key)
 ```
@@ -1152,6 +1325,7 @@ for key in english_to_french.keys():
 170. We could modify the print statement nested in the for loop to output the key and value.
 
 ```Python
+# for loop that outputs key-value pairs
 for key in english_to_french.keys():
   print(key, english_to_french[key])
 ```
@@ -1159,6 +1333,7 @@ for key in english_to_french.keys():
 171. And, we wouldn't actually need to use the `.keys()` method when iterating by keys.
 
 ```Python
+# alternate syntax for outputting key-value pairs
 for key in english_to_french:
   print(key, english_to_french[key])
 ```
@@ -1166,6 +1341,7 @@ for key in english_to_french:
 172. We can also iterate by key-value pairs, using the `.items()` method.
 
 ```Python
+# for loop that outputs key-value pairs using items
 for key, value, in english_to_french.items():
   print(key, value)
 ```
@@ -1174,7 +1350,7 @@ for key, value, in english_to_french.items():
 
 ## Dictionary Lab Notebook Question
 
-<blockquote>Q16: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
+<blockquote>Q17: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
 <ol type="a">
  <li>Add new elements to your dictionary.</li>
  <li>Update an element in your dictionary.</li>
@@ -1184,6 +1360,13 @@ for key, value, in english_to_french.items():
  </blockquote>
 
 # Sets
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5a24f407-5860-4d8b-8aea-ad8201622e0f">Sets</a></td>
+  </tr>
+  </table>
 
 174. A set is an unordered collection of unique objects. Sets are primarily used to see if an object or value is in the collection (membership).
 
@@ -1262,39 +1445,44 @@ s
 
 ## Set Lab Notebook Question
 
-<blockquote>Q17: Create the set <code>s</code> with the following values: <code>[1, 3, 5, 7, 9]</code>
+Q18: Create the set `s` with the following values: `[1, 3, 5, 7, 9]`
 <ol type="a">
   <li>Test to see if the value <code>11</code> is a member of the set.</li>
   <li>Test to see if the value <code>7</code> is a member of the set.</li>
   <li>Add a value to the set.</li>
   <li>Remove a value from the set.</li>
  </ol>
- </blockquote>
 
 # Additional Lab Notebook Questions
 
-<blockquote>Q18: What is the difference between a <code>list</code> and a <code>string</code>? What are some methods you can perform on a <code>list</code> that you can't do with a <code>string</code> (and vice versa)?</blockquote>
+Q19: What is the difference between a `list` and a `dict`? When would we prefer one over the other?
 
-<blockquote>Q19: What is the difference between a <code>list</code> and a <code>dict</code>? When would we prefer one over the other?</blockquote>
+Q20: What is the difference between a `dict` and a `set`? When would we prefer one over the other?
+
+Q21: Include a link to your Replit workspace for this lab.
 
 # How to submit this lab (and show your work)
 
-147. Moving forward, we'll submit lab notebooks as `.py` files. 
+Moving forward, we'll submit lab notebooks as `.py` files. 
 
-148. One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
+One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
 
-149. Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
+Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
   * Example: `Lab5_Notebook_Walden.py`
 
-150. What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
+What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
 - When in doubt, use comments
 - Be sure you are using comments to note what question you're responding to
  
 # Lab Notebook Questions
 
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1GrrOAcDbYlrRbLADh1bb2b3jbZUsnx6o/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1MMdu-e1YCynl8Xy17jh2NCLIQEOcUlZX?usp=sharing)
+
 Q1: In your own words, explain the difference between `print(hello)` and `print(“hello”)`.
 
-Q2: Describe the syntax of the three commands that we just used (steps 10-14) in your own words. What is this code doing? Define the function and method for each example.
+Q2: Describe the syntax of the three commands that we just used (steps 14-18) in your own words. What is this code doing? Define the function and method for each example.
 
 Q3: Explain how each of these two programs (steps 15-18) work in your own words.
 
@@ -1345,7 +1533,9 @@ Q15: Using the same list from the previous question, write a program that includ
 - Selects a list element at random
 - Shuffles your list
 
-Q16: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
+Q16: What is the difference between a `list` and a `string`? What are some methods you can perform on a `list` that you can't do with a `string` (and vice versa)?
+
+Q17: Create a dictionary on a topic of your choosing. Include at least 7 key-value pairs.
 <ol type="a">
  <li>Add new elements to your dictionary.</li>
  <li>Update an element in your dictionary.</li>
@@ -1353,7 +1543,7 @@ Q16: Create a dictionary on a topic of your choosing. Include at least 7 key-val
  <li>Print a list of all the values in your dictionary.</li>
  </ol>
 
-Q17: Create the set `s` with the following values: `[1, 3, 5, 7, 9]`
+Q18: Create the set `s` with the following values: `[1, 3, 5, 7, 9]`
 <ol type="a">
   <li>Test to see if the value <code>11</code> is a member of the set.</li>
   <li>Test to see if the value <code>7</code> is a member of the set.</li>
@@ -1361,6 +1551,8 @@ Q17: Create the set `s` with the following values: `[1, 3, 5, 7, 9]`
   <li>Remove a value from the set.</li>
  </ol>
   
-Q18: What is the difference between a `list` and a `string`? What are some methods you can perform on a `list` that you can't do with a `string` (and vice versa)?
-
 Q19: What is the difference between a `list` and a `dict`? When would we prefer one over the other?
+
+Q20: What is the difference between a `dict` and a `set`? When would we prefer one over the other?
+
+Q21: Include a link to your Replit workspace for this lab.
