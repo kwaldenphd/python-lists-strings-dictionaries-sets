@@ -29,6 +29,7 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
   </tr>
   </table>
 
+
 ## Acknowledgements
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Peter Bui](http://www3.nd.edu/~pbui/) for the [CSE 10101 "Elements of Computing I" course](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/).
@@ -104,6 +105,7 @@ Example:
 <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=119e8ba8-f51c-4e7e-8767-ae58010a6213">Lecture/live coding playlist</a></td>
   </tr>
   </table>
+
 
 
 # Lab Notebook Template
@@ -212,7 +214,15 @@ print(name.title())
 
 18. Try adding two additional `print()` functions calling the `name` variable with each of these methods.  
 
-<blockquote>Q2: Describe the syntax of the three print statements generated in steps 14-18 in your own words. What is this code doing? Define the function and method for each example.</blockquote>
+<blockquote>Q2: Describe the syntax of the following three `print()` statements in your own words. What is this code doing? Define the function and method for each example..</blockquote>
+
+```Python
+# Q2 examples
+name = "katherine walden"
+print(name.title())
+print(name.upper())
+print(name.lower())
+```
 
 ## Concatenation
 
@@ -264,7 +274,49 @@ sentence="Hello, " + full_name.title() + "!"
 print(sentence)
 ```
 
-<blockquote>Q3: Explain how each of these two programs (steps 20-23) work in your own words.</blockquote>
+<blockquote>Q3: Explain how each of these programs (steps 20-23) work in your own words.</blockquote>
+
+```Python
+# step 20 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# output last variable
+print(full_name)
+```
+
+```Python
+# step 21 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# output last variable in title case as part of print statement
+print("Hello, " + full_name.title() + "!")
+```
+
+```Python
+# step 23 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# use concatenation to create new variable
+sentence="Hello, " + full_name.title() + "!"
+
+# output last variable
+print(sentence)
+```
 
 ### Combining Variable Types
 
@@ -306,7 +358,25 @@ print("Welcome to " + course_name.title() + " CSE:" + course_number)
 # concatenation in print statement, using str function to convert course number
 print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 ```
-<blockquote>Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.</blockquote>
+<blockquote>Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to the examples in step 27 and 30.</blockquote>
+
+```Python
+# step 27 example
+# assign string variable
+course_name="Elements of Computing I"
+
+# assign integer variable
+course_number = 10101
+
+# concatenation in print statement
+print("Welcome to " + course_name.title() + " CSE:" + course_number)
+```
+
+```Python
+# step 30 example
+# concatenation in print statement, using str function to convert course number
+print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
+```
 
 <blockquote>Q6: Write a program that converts integer, float, or boolean values to a string, using the <code>str</code> function.</code></blockquote>
 
@@ -524,6 +594,18 @@ print ("The index number for the letter q within the word " + color + " is " + i
 
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
 
+```Python
+# program you're modifying for Q8
+# assign string variable
+color = "turquoise"
+
+# get index number of q character
+index_number = color.index("q")
+
+# show index number as part of print statement
+print ("The index number for the letter q within the word " + color + " is " + index_number)
+```
+
 # Lists
 
 <table>
@@ -681,6 +763,15 @@ print(numbers)
 
 <blockquote>Q9: How would you modify this code to output the full range 1-10?</blockquote>
 
+```Python
+# program you're modifying for Q9
+# create list of numbers
+numbers = list(range(1,10))
+
+# show list of numbers
+print(numbers)
+```
+
 81. What if we just wanted the odd numbers in this range? 
 
 82. We could add an additional value to the range function to tell the computer to count by two.
@@ -696,6 +787,15 @@ print(numbers)
 ```
 
 <blockquote>Q10: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
+
+```Python
+# program you're modifying for Q10
+# create list of numbers with specific start/stop/step interval values
+numbers = list(range(1,11,2))
+
+# show list
+print(numbers)
+```
 
 #### Deleting Items from Lists
 
@@ -1479,13 +1579,81 @@ Lab notebook template:
 
 Q1: In your own words, explain the difference between `print(hello)` and `print(“hello”)`.
 
-Q2: Describe the syntax of the three commands that we just used (steps 14-18) in your own words. What is this code doing? Define the function and method for each example.
+Q2: Describe the syntax of the following three `print()` statements in your own words. What is this code doing? Define the function and method for each example.
 
-Q3: Explain how each of these two programs (steps 15-18) work in your own words.
+```Python
+# Q2 examples
+name = "katherine walden"
+print(name.title())
+print(name.upper())
+print(name.lower())
+```
+
+Q3: Explain how each of these programs (steps 20-23) work in your own words.
+
+```Python
+# step 20 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# output last variable
+print(full_name)
+```
+
+```Python
+# step 21 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# output last variable in title case as part of print statement
+print("Hello, " + full_name.title() + "!")
+```
+
+```Python
+# step 23 program
+# assign string variables
+first_name = "katherine"
+last_name = "walden"
+
+# use concatenation to create new variable
+full_name = first_name + " " + last name
+
+# use concatenation to create new variable
+sentence="Hello, " + full_name.title() + "!"
+
+# output last variable
+print(sentence)
+```
 
 Q4: Why does `print(2//3)` return `0`? How would you modify your code to return the decimal number? Why?
 
-Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.
+Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to the examples in step 27 and 30.
+
+```Python
+# step 27 example
+# assign string variable
+course_name="Elements of Computing I"
+
+# assign integer variable
+course_number = 10101
+
+# concatenation in print statement
+print("Welcome to " + course_name.title() + " CSE:" + course_number)
+```
+
+```Python
+# step 30 example
+# concatenation in print statement, using str function to convert course number
+print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
+```
 
 Q6: Write a program that converts integer, float, or boolean values to a string, using the `str()` function.
 
@@ -1493,9 +1661,39 @@ Q7: Write a program that prompts the user to enter a 6-letter word, and then pri
 
 Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?
 
+```Python
+# program you're modifying for Q8
+# assign string variable
+color = "turquoise"
+
+# get index number of q character
+index_number = color.index("q")
+
+# show index number as part of print statement
+print ("The index number for the letter q within the word " + color + " is " + index_number)
+```
+
 Q9: How would you modify this code to output the full range 1-10?
 
+```Python
+# program you're modifying for Q9
+# create list of numbers
+numbers = list(range(1,10))
+
+# show list of numbers
+print(numbers)
+```
+
 Q10: How would you rewrite the code to include only the even numbers from 1 to 10?
+
+```Python
+# program you're modifying for Q10
+# create list of numbers with specific start/stop/step interval values
+numbers = list(range(1,11,2))
+
+# show list
+print(numbers)
+```
 
 Q11: Create the list `numbers` with the following values: `[[0, 1], [2, 3], [4, 5]]`
 <ol type="a">
@@ -1514,7 +1712,7 @@ Q13: Using the same list from the previous question, write a program that includ
 - Sorts your list in-place
 - Generates a sorted version of your list
 - Reverses your list in-place
-- Determines the `min` and `max` values for your list
+- Determiens the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
