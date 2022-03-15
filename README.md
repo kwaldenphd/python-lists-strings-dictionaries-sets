@@ -1165,8 +1165,6 @@ Q15: Using the same list from the previous question, write a program that includ
 - Selects a list element at random
 - Shuffles your list
 
-# Additional Lab Notebook Questions on Lists With Strings
-
 Q16: What is the difference between a `list` and a `string`? What are some methods you can perform on a `list` that you can't do with a `string` (and vice versa)?
 
 # Dictionaries
