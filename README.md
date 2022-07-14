@@ -1467,7 +1467,7 @@ Q17: Create a dictionary on a topic of your choosing. Include at least 7 key-val
 
 174. A set is an unordered collection of unique objects. Sets are primarily used to see if an object or value is in the collection (membership).
 
-<p align="center"><a href="https://github.com/kwaldenphd/python-dictionaries-sets/blob/master/figures/Sets.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/python-dictionaries-sets/blob/master/figures/Sets.png?raw=true" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/python-dictionaries-sets/blob/main/figures/Sets.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/python-dictionaries-sets/blob/main/figures/Sets.png?raw=true" /></a></p>
 
 175. There are many different types of set operations, but this lab is just going to focus on testing for membership.
 
